@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Científica</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="calculator">
+        <input type="text" id="display" class="form-control" readonly>
+        <div class="buttons">
+          <button class="btn btn-light" onclick="clearDisplay()">C</button>
+          <button class="btn btn-light" onclick="appendInput('7')">7</button>
+          <button class="btn btn-light" onclick="appendInput('8')">8</button>
+          <button class="btn btn-light" onclick="appendInput('9')">9</button>
+          <button class="btn btn-light" onclick="appendInput('/')">/</button>
+          <button class="btn btn-light" onclick="appendInput('sqrt(')">√</button>
+          <button class="btn btn-light" onclick="appendInput('4')">4</button>
+          <button class="btn btn-light" onclick="appendInput('5')">5</button>
+          <button class="btn btn-light" onclick="appendInput('6')">6</button>
+          <button class="btn btn-light" onclick="appendInput('*')">*</button>
+          <button class="btn btn-light" onclick="appendInput('^')">^</button>
+          <button class="btn btn-light" onclick="appendInput('1')">1</button>
+          <button class="btn btn-light" onclick="appendInput('2')">2</button>
+          <button class="btn btn-light" onclick="appendInput('3')">3</button>
+          <button class="btn btn-light" onclick="appendInput('-')">-</button>
+          <button class="btn btn-light" onclick="appendInput('log(')">log</button>
+          <button class="btn btn-light" onclick="appendInput('0')">0</button>
+          <button class="btn btn-light" onclick="appendInput('.')">.</button>
+          <button class="btn btn-light" onclick="calculate()">=</button>
+          <button class="btn btn-light" onclick="appendInput('+')">+</button>
+          <button class="btn btn-light" onclick="appendInput('sin(')">sin</button>
+          <button class="btn btn-light" onclick="appendInput('cos(')">cos</button>
+          <button class="btn btn-light" onclick="appendInput('tan(')">tan</button>
+          <button class="btn btn-light" onclick="appendInput('(')">(</button>
+          <button class="btn btn-light" onclick="appendInput(')')">)</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="history">
+        <h3>Historial</h3>
+        <ul id="history-list"></ul>
+        <button class="btn btn-danger" onclick="clearHistory()">Borrar Historial</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
